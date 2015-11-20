@@ -1,5 +1,6 @@
 'use strict';
 function isPrime(number) {
+
   if (number === 2) {
     return true;
   }
@@ -19,7 +20,8 @@ function nthPrimeNumber(n) {
   var number = 2;
   
   while (counter <= n){
-    if (isPrime(number) === true) {           primes.push(number);
+    if (isPrime(number) === true) {
+      primes.push(number);
       counter += 1;
       number += 1;
     } else {
@@ -31,5 +33,7 @@ function nthPrimeNumber(n) {
   return primes[n-1];
 }
 
+console.time("timer name");
 console.log(nthPrimeNumber(10001)); 
+console.timeEnd("timer name");
 // 104743
